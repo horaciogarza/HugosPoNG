@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace pongGame
 {
-    public partial class Form1 : Form
+    public partial class PrincipalWindow : Form
     {
-        public Form1()
+        public PrincipalWindow()
         {
             InitializeComponent();
         }
