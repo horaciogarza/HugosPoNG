@@ -19,7 +19,6 @@ namespace pongGame
         public gameWindow()
         {
             InitializeComponent();
-            
         }
 
         private void gameWindow_Load(object sender, EventArgs e)
@@ -27,7 +26,17 @@ namespace pongGame
 
         }
 
-        private void playerOne_Click(object sender, EventArgs e)
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playerTwo_Click(object sender, EventArgs e)
         {
 
         }
