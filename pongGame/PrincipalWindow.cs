@@ -36,7 +36,7 @@ namespace pongGame
 
         private void btnHighscores_Click(object sender, EventArgs e)
         {
-            Highscores hs1 = new Highscores();
+            Highscore hs1 = new Highscore();
             hs1.Show();
         }
     }

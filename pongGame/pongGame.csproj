@@ -58,11 +58,19 @@
     <Compile Include="gameWindow.Designer.cs">
       <DependentUpon>gameWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Highscore.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Highscore.Designer.cs">
+      <DependentUpon>Highscore.cs</DependentUpon>
+    </Compile>
     <Compile Include="Highscores.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Highscores.Designer.cs">
-      <DependentUpon>Highscores.cs</DependentUpon>
+      <DependentUpon>Highscores.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
     </Compile>
     <Compile Include="PrincipalWindow.cs">
       <SubType>Form</SubType>
@@ -78,8 +86,13 @@
     <EmbeddedResource Include="gameWindow.resx">
       <DependentUpon>gameWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Highscore.resx">
+      <DependentUpon>Highscore.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Highscores.resx">
       <DependentUpon>Highscores.cs</DependentUpon>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Highscores.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalWindow.resx">
       <DependentUpon>PrincipalWindow.cs</DependentUpon>

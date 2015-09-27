@@ -62,6 +62,7 @@
             this.playerOne.Size = new System.Drawing.Size(10, 80);
             this.playerOne.TabIndex = 0;
             this.playerOne.TabStop = false;
+            
             // 
             // playerTwo
             // 
