@@ -30,7 +30,14 @@ namespace pongGame
         //Here's the method where we will sum the Y coord
         public void sumY()
         {
-            this.y += 1;
+            this.y += 10;
+            
+        }
+
+        public void substractY()
+        {
+            this.y -= 10;
+            
         }
 
         //Method to sumY
