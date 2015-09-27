@@ -16,5 +16,10 @@ namespace pongGame
         {
             InitializeComponent();
         }
+
+        private void PrincipalWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

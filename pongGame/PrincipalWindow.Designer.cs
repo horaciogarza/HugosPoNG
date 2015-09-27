@@ -36,7 +36,7 @@
             // 
             // btnStartGame
             // 
-            this.btnStartGame.Location = new System.Drawing.Point(578, 265);
+            this.btnStartGame.Location = new System.Drawing.Point(345, 246);
             this.btnStartGame.Name = "btnStartGame";
             this.btnStartGame.Size = new System.Drawing.Size(143, 33);
             this.btnStartGame.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // btnHighscores
             // 
-            this.btnHighscores.Location = new System.Drawing.Point(36, 73);
+            this.btnHighscores.Location = new System.Drawing.Point(347, 285);
             this.btnHighscores.Name = "btnHighscores";
             this.btnHighscores.Size = new System.Drawing.Size(141, 33);
             this.btnHighscores.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             // btnAbout
             // 
-            this.btnAbout.Location = new System.Drawing.Point(635, 46);
+            this.btnAbout.Location = new System.Drawing.Point(364, 324);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(108, 23);
             this.btnAbout.TabIndex = 2;
@@ -72,8 +72,10 @@
             this.Controls.Add(this.btnHighscores);
             this.Controls.Add(this.btnStartGame);
             this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PrincipalWindow";
             this.Text = "PrincipalWindow";
+            this.Load += new System.EventHandler(this.PrincipalWindow_Load);
             this.ResumeLayout(false);
 
         }
