@@ -36,7 +36,7 @@
             // 
             // btnStartGame
             // 
-            this.btnStartGame.Location = new System.Drawing.Point(182, 207);
+            this.btnStartGame.Location = new System.Drawing.Point(578, 265);
             this.btnStartGame.Name = "btnStartGame";
             this.btnStartGame.Size = new System.Drawing.Size(143, 33);
             this.btnStartGame.TabIndex = 0;
@@ -45,7 +45,7 @@
             // 
             // btnHighscores
             // 
-            this.btnHighscores.Location = new System.Drawing.Point(184, 246);
+            this.btnHighscores.Location = new System.Drawing.Point(36, 73);
             this.btnHighscores.Name = "btnHighscores";
             this.btnHighscores.Size = new System.Drawing.Size(141, 33);
             this.btnHighscores.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             // btnAbout
             // 
-            this.btnAbout.Location = new System.Drawing.Point(202, 285);
+            this.btnAbout.Location = new System.Drawing.Point(635, 46);
             this.btnAbout.Name = "btnAbout";
             this.btnAbout.Size = new System.Drawing.Size(108, 23);
             this.btnAbout.TabIndex = 2;
@@ -67,7 +67,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(504, 311);
+            this.ClientSize = new System.Drawing.Size(825, 387);
             this.Controls.Add(this.btnAbout);
             this.Controls.Add(this.btnHighscores);
             this.Controls.Add(this.btnStartGame);
