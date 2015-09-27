@@ -83,6 +83,16 @@ namespace pongGame.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap backgroundMenu2 {
+            get {
+                object obj = ResourceManager.GetObject("backgroundMenu2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap backgroundPong {
             get {
                 object obj = ResourceManager.GetObject("backgroundPong", resourceCulture);
