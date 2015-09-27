@@ -12,12 +12,22 @@ namespace pongGame
 {
     public partial class gameWindow : Form
     {
+
+        Player p1 = new Player(0, 0);
+        Player p2 = new Player(0, 0);
+
         public gameWindow()
         {
             InitializeComponent();
+            
         }
 
         private void gameWindow_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void playerOne_Click(object sender, EventArgs e)
         {
 
         }

@@ -42,6 +42,7 @@
             this.playerOne.Size = new System.Drawing.Size(10, 70);
             this.playerOne.TabIndex = 0;
             this.playerOne.TabStop = false;
+            this.playerOne.Click += new System.EventHandler(this.playerOne_Click);
             // 
             // playerTwo
             // 
