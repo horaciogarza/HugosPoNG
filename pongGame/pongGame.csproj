@@ -46,11 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="gameWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="gameWindow.Designer.cs">
       <DependentUpon>gameWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Highscores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Highscores.Designer.cs">
+      <DependentUpon>Highscores.cs</DependentUpon>
     </Compile>
     <Compile Include="PrincipalWindow.cs">
       <SubType>Form</SubType>
@@ -60,8 +72,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="gameWindow.resx">
       <DependentUpon>gameWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Highscores.resx">
+      <DependentUpon>Highscores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PrincipalWindow.resx">
       <DependentUpon>PrincipalWindow.cs</DependentUpon>
@@ -100,6 +118,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\backgroundMenu1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cm1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

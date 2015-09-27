@@ -27,5 +27,17 @@ namespace pongGame
             gameWindow gw1 = new gameWindow();
             gw1.Show();
         }
+
+        private void btnAbout_Click(object sender, EventArgs e)
+        {
+            About ab1 = new About();
+            ab1.Show();
+        }
+
+        private void btnHighscores_Click(object sender, EventArgs e)
+        {
+            Highscores hs1 = new Highscores();
+            hs1.Show();
+        }
     }
 }

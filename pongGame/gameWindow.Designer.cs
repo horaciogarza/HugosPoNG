@@ -59,7 +59,7 @@
             this.playerOne.Image = global::pongGame.Properties.Resources.player;
             this.playerOne.Location = new System.Drawing.Point(40, 132);
             this.playerOne.Name = "playerOne";
-            this.playerOne.Size = new System.Drawing.Size(10, 120);
+            this.playerOne.Size = new System.Drawing.Size(10, 80);
             this.playerOne.TabIndex = 0;
             this.playerOne.TabStop = false;
             // 
@@ -69,7 +69,7 @@
             this.playerTwo.Image = global::pongGame.Properties.Resources.player;
             this.playerTwo.Location = new System.Drawing.Point(734, 132);
             this.playerTwo.Name = "playerTwo";
-            this.playerTwo.Size = new System.Drawing.Size(10, 120);
+            this.playerTwo.Size = new System.Drawing.Size(10, 80);
             this.playerTwo.TabIndex = 1;
             this.playerTwo.TabStop = false;
             this.playerTwo.Click += new System.EventHandler(this.playerTwo_Click);
