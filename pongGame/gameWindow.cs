@@ -19,6 +19,8 @@ namespace pongGame
         Player p1 = new Player(132, 0);
         Player p2 = new Player(132, 0);
 
+        
+
         public gameWindow()
         {
             InitializeComponent();
@@ -68,8 +70,9 @@ namespace pongGame
             }
             else
             {
+                p1.sumY();
+                playerOne.Location = new Point(40, p1.getY());
 
-                playerOne.Location = new Point(40, p1.sumY());
             }
         }
 
@@ -81,8 +84,8 @@ namespace pongGame
             }
             else
             {
-                
-                playerOne.Location = new Point(40, p1.sumY());
+                p1.substractY();
+                playerOne.Location = new Point(40, p1.getY());
             }
         }
     }
