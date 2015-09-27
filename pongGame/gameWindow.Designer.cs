@@ -55,20 +55,22 @@
             // 
             // playerOne
             // 
+            this.playerOne.BackColor = System.Drawing.Color.White;
             this.playerOne.Image = global::pongGame.Properties.Resources.player;
             this.playerOne.Location = new System.Drawing.Point(40, 132);
             this.playerOne.Name = "playerOne";
-            this.playerOne.Size = new System.Drawing.Size(10, 70);
+            this.playerOne.Size = new System.Drawing.Size(10, 120);
             this.playerOne.TabIndex = 0;
             this.playerOne.TabStop = false;
             
             // 
             // playerTwo
             // 
+            this.playerTwo.BackColor = System.Drawing.Color.White;
             this.playerTwo.Image = global::pongGame.Properties.Resources.player;
             this.playerTwo.Location = new System.Drawing.Point(734, 132);
             this.playerTwo.Name = "playerTwo";
-            this.playerTwo.Size = new System.Drawing.Size(10, 70);
+            this.playerTwo.Size = new System.Drawing.Size(10, 120);
             this.playerTwo.TabIndex = 1;
             this.playerTwo.TabStop = false;
             this.playerTwo.Click += new System.EventHandler(this.playerTwo_Click);
@@ -120,6 +122,7 @@
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox3.Location = new System.Drawing.Point(380, 138);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(10, 37);
@@ -175,7 +178,6 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::pongGame.Properties.Resources.backgroundPong;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 361);

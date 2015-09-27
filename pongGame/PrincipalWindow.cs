@@ -21,5 +21,11 @@ namespace pongGame
         {
 
         }
+
+        private void btnStartGame_Click(object sender, EventArgs e)
+        {
+            gameWindow gw1 = new gameWindow();
+            gw1.Show();
+        }
     }
 }
