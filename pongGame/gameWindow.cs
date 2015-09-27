@@ -16,9 +16,9 @@ namespace pongGame
     public partial class gameWindow : Form
     {
 
-        Player p1 = new Player(132, 0);
-        Player p2 = new Player(132, 0);
-
+        
+        protected int yPlayer1 = 132;
+        protected int yPlayer2 = 132;
         
 
         public gameWindow()
@@ -62,31 +62,78 @@ namespace pongGame
         private void gameWindow_KeyDown(object sender, KeyEventArgs e)
         {
 
-           
             
-            if (playerOne.Location.Y > 790 || playerOne.Location.Y < 20 )
-            {
+            
 
-            }
-            else
-            {
-                p1.sumY();
-                playerOne.Location = new Point(40, p1.getY());
-
-            }
+            
         }
 
         private void gameWindow_KeyUp(object sender, KeyEventArgs e)
         {
-            if (playerOne.Location.Y > 790 || playerOne.Location.Y < 20)
+
+
+            switch (e.KeyData)
             {
+                case Keys.Up:
+
+                        if (yPlayer1 > 20)
+                        {
+                            yPlayer1 -= 20;
+                            playerOne.Location = new Point(40, yPlayer1);
+                        }
+                    break;
+
+                case Keys.Down:
+
+                        if (yPlayer1 < 260)
+                        {
+                            yPlayer1 += 20;
+                            playerOne.Location = new Point(40, yPlayer1);
+                        }
+
+                    break;
+
+
+                case Keys.W:
+
+                    if (yPlayer2 > 20)
+                    {
+                        yPlayer2 -= 20;
+                        playerTwo.Location = new Point(734, yPlayer2);
+                    }
+                    break;
+
+                case Keys.S:
+
+                    if (yPlayer2 < 260)
+                    {
+                        yPlayer2 += 20;
+                        playerTwo.Location = new Point(734, yPlayer2);
+                    }
+
+                    break;
+
 
             }
-            else
-            {
-                p1.substractY();
-                playerOne.Location = new Point(40, p1.getY());
-            }
+            
+
+
+
+
+
+
+
+
+        }
+
+        private void gameWindow_MouseUp(object sender, MouseEventArgs e)
+        {
+           
+        }
+
+        private void playerOne_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

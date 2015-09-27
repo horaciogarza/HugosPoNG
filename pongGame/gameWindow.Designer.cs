@@ -64,6 +64,7 @@
             this.playerOne.Size = new System.Drawing.Size(10, 80);
             this.playerOne.TabIndex = 0;
             this.playerOne.TabStop = false;
+            this.playerOne.Click += new System.EventHandler(this.playerOne_Click);
             // 
             // playerTwo
             // 
@@ -84,9 +85,9 @@
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(267, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(73, 103);
+            this.label1.Size = new System.Drawing.Size(74, 103);
             this.label1.TabIndex = 2;
-            this.label1.Text = "2";
+            this.label1.Text = "0";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
@@ -97,9 +98,9 @@
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(434, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 103);
+            this.label2.Size = new System.Drawing.Size(74, 103);
             this.label2.TabIndex = 3;
-            this.label2.Text = "3";
+            this.label2.Text = "0";
             this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // pictureBox1
@@ -202,11 +203,12 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(10, 10);
             this.Name = "gameWindow";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Pong";
             this.Load += new System.EventHandler(this.gameWindow_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameWindow_KeyDown);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gameWindow_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gameWindow_KeyUp);
+            this.MouseUp += new System.Windows.Forms.MouseEventHandler(this.gameWindow_MouseUp);
             ((System.ComponentModel.ISupportInitialize)(this.playerOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerTwo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
