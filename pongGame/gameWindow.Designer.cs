@@ -43,6 +43,7 @@
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.timerForGame = new System.Windows.Forms.Timer(this.components);
+            this.ball = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.playerOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -53,6 +54,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ball)).BeginInit();
             this.SuspendLayout();
             // 
             // playerOne
@@ -179,7 +181,17 @@
             // timerForGame
             // 
             this.timerForGame.Enabled = true;
+            this.timerForGame.Interval = 1;
             this.timerForGame.Tick += new System.EventHandler(this.timerForGame_Tick);
+            // 
+            // ball
+            // 
+            this.ball.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ball.Location = new System.Drawing.Point(380, 165);
+            this.ball.Name = "ball";
+            this.ball.Size = new System.Drawing.Size(10, 10);
+            this.ball.TabIndex = 12;
+            this.ball.TabStop = false;
             // 
             // gameWindow
             // 
@@ -188,6 +200,11 @@
             this.BackgroundImage = global::pongGame.Properties.Resources.backgroundPong;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(784, 361);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.playerTwo);
+            this.Controls.Add(this.playerOne);
+            this.Controls.Add(this.ball);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.pictureBox6);
@@ -196,10 +213,6 @@
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.playerTwo);
-            this.Controls.Add(this.playerOne);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Location = new System.Drawing.Point(10, 10);
             this.Name = "gameWindow";
@@ -219,6 +232,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ball)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,5 +253,6 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.Timer timerForGame;
+        private System.Windows.Forms.PictureBox ball;
     }
 }
