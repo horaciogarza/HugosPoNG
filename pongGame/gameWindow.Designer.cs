@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(gameWindow));
             this.playerOne = new System.Windows.Forms.PictureBox();
             this.playerTwo = new System.Windows.Forms.PictureBox();
@@ -41,6 +42,7 @@
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.timerForGame = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.playerOne)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerTwo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -62,7 +64,6 @@
             this.playerOne.Size = new System.Drawing.Size(10, 120);
             this.playerOne.TabIndex = 0;
             this.playerOne.TabStop = false;
-            
             // 
             // playerTwo
             // 
@@ -174,6 +175,11 @@
             this.pictureBox8.TabIndex = 11;
             this.pictureBox8.TabStop = false;
             // 
+            // timerForGame
+            // 
+            this.timerForGame.Enabled = true;
+            this.timerForGame.Tick += new System.EventHandler(this.timerForGame_Tick);
+            // 
             // gameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -198,6 +204,9 @@
             this.Name = "gameWindow";
             this.Text = "Pong";
             this.Load += new System.EventHandler(this.gameWindow_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.gameWindow_KeyDown);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.gameWindow_KeyPress);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.gameWindow_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.playerOne)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerTwo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -227,5 +236,6 @@
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.Timer timerForGame;
     }
 }
