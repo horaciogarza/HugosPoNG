@@ -21,6 +21,12 @@ namespace pongGame
         protected int yPlayer2 = 132, player2Score = 0;
         protected int xBall = 380;
         protected int yBall = 135;
+        System.Media.SoundPlayer bounceSound = new System.Media.SoundPlayer(@"C:\Users\hgx95\Desktop\bounceSound.wav");
+        System.Media.SoundPlayer bounceSound2 = new System.Media.SoundPlayer(@"C:\Users\hgx95\Desktop\bounceSound2.wav");
+        System.Media.SoundPlayer loose = new System.Media.SoundPlayer(@"C:\Users\hgx95\Desktop\overSound.wav");
+
+
+
 
 
         public gameWindow()
@@ -62,7 +68,9 @@ namespace pongGame
 
             
         }
-
+        /// <summary>
+        /// the move Ball indicates each move of X and Y
+        /// </summary>
         private void moveBall()
         {
             
@@ -70,16 +78,61 @@ namespace pongGame
             yBall += y;
         }
 
+        /// <summary>
+        /// checkIfBounce() method is used for checking if the ball is in the area where it can bounce, like the rackets (players),
+        /// the collisions with the walls (in Y)
+        /// </summary>
         private void checkIfBounce()
         {
+            //The first second player code (The right one)
             if (xBall >= 730 &&  yBall <= (yPlayer2+80) && yBall >= yPlayer2)
             {
+                bounceSound.Play();
                 x = x * (-1);
+                if (yBall == (yPlayer2+40))
+                {
+                    yBall = 0;
+                    y = 0;
+                }
+                else
+                {
+                    if (yBall > (yPlayer2+40))
+                    {
+                         y += 3*(yBall - (yPlayer2 + 40))/4;
+                    }
+                    else
+                    {
+                       y +=  3*((yPlayer2+40)- yBall)/4;
+                    }
+                }
+                
             }
 
+            //The first player code (The left one)
             if (xBall <= 42 && yBall <= (yPlayer1 + 80) && yBall >= yPlayer1)
             {
+                bounceSound2.Play();
                 x = x * (-1);
+
+                if (yBall == (yPlayer1 + 40))
+                {
+                    yBall = 0;
+                    y = 0;
+                }
+                else
+                {
+                    if (yBall > (yPlayer1 + 40))
+                    {
+                        y += 3 * (yBall - (yPlayer1 + 40)) / 4;
+                    }
+                    else
+                    {
+                        y += 3 * ((yPlayer1 + 40) - yBall) / 4;
+                        
+                    }
+                }
+
+
             }
 
 
@@ -88,44 +141,56 @@ namespace pongGame
                 y = y * (-1);
             }
 
-            
+         
 
         }
 
+        /// <summary>
+        /// Here we created a method for checking if the ball is in the loosing area
+        /// </summary>
+        /// 
         private void checkIfLoose()
         {
-            if (xBall >= 744)
+            //Checking the right player
+            if (xBall >= 744 && (yBall >= (yPlayer2 + 80) || yBall <= yPlayer2))
             {
+                loose.Play();
                 player1Score += 1;
-
+                y = 10;
+                
+                
                 label1.Text = player1Score.ToString();
 
-                xBall = 380;
+                xBall = 380; //We initalate in the center of the screen
+            }
+
+            //Checking the left player
+            if (xBall <= 42 && (yBall >= (yPlayer1 + 80) || yBall <= yPlayer1))
+            {
+                loose.Play();
+                player2Score += 1;
+                y = 10;
+                
+                label2.Text = player2Score.ToString();
+
+                xBall = 380; //We initalate in the center of the screen
             }
         }
 
-        private void gameWindow_KeyPress(object sender, KeyPressEventArgs e)
-        {
+       
 
-
-
-        }
-        private void gameWindow_KeyDown(object sender, KeyEventArgs e)
-        {
-
-            
-            
-
-            
-        }
-
+        /// <summary>
+        /// This method is used for constantly checking if one key is pressed or not
+        /// </summary>
+        /// <param name="sender">Default parameter</param>
+        /// <param name="e">Default parameter</param>
         private void gameWindow_KeyUp(object sender, KeyEventArgs e)
         {
 
 
             switch (e.KeyData)
             {
-                case Keys.Up:
+                case Keys.W:
 
                         if (yPlayer1 > 20)
                         {
@@ -134,7 +199,7 @@ namespace pongGame
                         }
                     break;
 
-                case Keys.Down:
+                case Keys.S:
 
                         if (yPlayer1 < 260)
                         {
@@ -145,7 +210,7 @@ namespace pongGame
                     break;
 
 
-                case Keys.W:
+                case Keys.Up:
 
                         if (yPlayer2 > 20)
                         {
@@ -154,7 +219,7 @@ namespace pongGame
                         }
                     break;
 
-                case Keys.S:
+                case Keys.Down:
 
                         if (yPlayer2 < 260)
                         {
@@ -177,14 +242,29 @@ namespace pongGame
 
         }
 
+
+        //Unused methods
         private void gameWindow_MouseUp(object sender, MouseEventArgs e)
         {
            
         }
-
         private void playerOne_Click(object sender, EventArgs e)
         {
 
+        } 
+        private void gameWindow_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+
+
+        }
+        private void gameWindow_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            
+            
+
+            
         }
     }
 }
