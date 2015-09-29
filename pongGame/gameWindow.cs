@@ -157,9 +157,15 @@ namespace pongGame
                 loose.Play();
                 player1Score += 1;
                 y = 10;
+
+                x = 10;
+                y = 10;
                 
-                
-                label1.Text = player1Score.ToString();
+                xBall = 380;
+                yBall = 135;
+
+
+        label1.Text = player1Score.ToString();
 
                 xBall = 380; //We initalate in the center of the screen
             }
@@ -176,6 +182,8 @@ namespace pongGame
                 xBall = 380; //We initalate in the center of the screen
             }
         }
+
+        
 
        
 
